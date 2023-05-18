@@ -12,4 +12,4 @@ jobs:
     environment: DEV
     runs-on: windows-latest
     steps:
-      - run: echo ${{ vars.MY_VAR }}
+      - run: echo ${{ secrets.SECURE_TOKEN }}
