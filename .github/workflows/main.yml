@@ -16,6 +16,6 @@ jobs:
   
   deployPROD:
     environment: PROD
-    runs-on: local
+    runs-on: self-hosted
     steps:
       - run: echo ${{ secrets.SECURE_TOKEN }}
