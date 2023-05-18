@@ -8,8 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{ vars.MY_VAR }}
-  deployment:
+  deployDEV:
     environment: DEV
     runs-on: windows-latest
     steps:
       - run: echo ${{ secrets.SECURE_TOKEN }}
+  
+  deployPROD:
+    environment: PROD
+    runs-on: windows-latest
+    steps:
+      - run: echo ${{ secrets.SECURE_TOKEN }}:0:10
